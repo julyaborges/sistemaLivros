@@ -4,7 +4,8 @@ public class SistemaLivros {
 
         Livros livro = new Livros();
         livro.setCodigo(1);
-        livro.setTitulo("Código da Vinci"); 
+        livro.setTitulo("Codigo da Vinci"); 
+        livro.setAutor("Autor Desconhecido");
         livro.setEditora("Editora XYZ");
         livro.setNrPaginas(100);
         livro.setEdicao(1);
@@ -23,7 +24,7 @@ public class SistemaLivros {
         livrobiblioteca.setNrPaginas(200);
         livrobiblioteca.setEdicao(6);
         livrobiblioteca.setLocalPrateleira("Prateleira AB2"); 
-        livrobiblioteca.setCategoria("Animação"); 
+        livrobiblioteca.setCategoria("Animacao"); 
         livrobiblioteca.setPrazoEntrega(10);
         livrobiblioteca.setNomeQuemEmprestou("Ana Julya");
 
@@ -42,7 +43,7 @@ public class SistemaLivros {
         livrolivraria.setNrPaginas(200);
         livrolivraria.setEdicao(6);
         livrolivraria.setLocalPrateleira("Prateleira AB2"); 
-        livrolivraria.setCategoria("Animação"); 
+        livrolivraria.setCategoria("Animacao"); 
         livrolivraria.setPreco(10.99);
         livrolivraria.setNovoUsado("Usado");
 
@@ -51,6 +52,28 @@ public class SistemaLivros {
         System.out.println("Codigo do livro livraria: "+livrolivraria.getCodigo());
         System.out.println("Codigo do livro biblioteca: "+livrobiblioteca.getCodigo());
         System.out.println("Codigo do livro: "+livro.getCodigo());
+
+        String mensagem = "\nCodigo: "+livro.getCodigo()+
+                                "\nTitulo: "+livro.getTitulo()+
+                                "\nAutor: "+livro.getAutor()+
+                                "\nEditora: "+livro.getEditora()+
+                                "\nNumero de paginas: "+livro.getNrPaginas()+
+                                "\nEdicao: "+livro.getEdicao();
+        
+        System.out.println("\n\nLivro: "+mensagem);
+
+        System.out.println("\n\nLivro Biblioteca: "+mensagem+
+                            "\nLocal Prateleira: "+livrobiblioteca.getLocalPrateleira()+
+                                "\nCategoria: "+livrobiblioteca.getCategoria()+
+                                "\nPrazo de entrega: "+livrobiblioteca.getPrazoEntrega()+
+                                "\nNome de quem Emprestou: "+livrobiblioteca.getNomeQuemEmprestou());    
+
+        System.out.println("\n\nLivro Livraria: "+mensagem+
+                            "\nPreco: "+livrolivraria.getPreco()+
+                            "\nNovo ou Usado: "+livrolivraria.getNovoUsado()+
+                            "\nLocal da prateleira: "+livrolivraria.getLocalPrateleira()+
+                            "\nCategoria: "+livrolivraria.getCategoria());                 
+
 
     }
 }
