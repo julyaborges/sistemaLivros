@@ -3,11 +3,11 @@ public class SistemaLivros {
     public static void main(String[] args){
 
         Livros livro = new Livros();
-        livro.codigo = 1;
-        livro.titulo = "Código da Vinci";
-        livro.editora = "Editora XYZ";
-        livro.nrPaginas = 100;
-        livro.edicao = 3;
+        livro.setCodigo(1);
+        livro.setTitulo("Código da Vinci"); 
+        livro.setEditora("Editora XYZ");
+        livro.setNrPaginas(100);
+        livro.setEdicao(1);
 
         livro.Ler();
         livro.Cadastrar();
@@ -16,16 +16,16 @@ public class SistemaLivros {
         /*Livro Biblioteca*/
         LivroBiblioteca livrobiblioteca = new LivroBiblioteca();
 
-        livrobiblioteca.codigo = 11;
-        livrobiblioteca.titulo = "Cinderela";
-        livrobiblioteca.autor = "Autor Desconhecido";
-        livrobiblioteca.editora = "Editora 123"; 
-        livrobiblioteca.nrPaginas = 200;
-        livrobiblioteca.edicao = 6;
-        livrobiblioteca.localPrateleira = "Prateleira AB2";
-        livrobiblioteca.categoria = "Animação";
-        livrobiblioteca.prazoEntrega = 10;
-        livrobiblioteca.nomeQuemEmprestou = "Marcelo Petri";
+        livrobiblioteca.setCodigo(11);
+        livrobiblioteca.setTitulo("Cinderela"); 
+        livrobiblioteca.setAutor("Autor Desconhecido");
+        livrobiblioteca.setEditora("Editora 123"); 
+        livrobiblioteca.setNrPaginas(200);
+        livrobiblioteca.setEdicao(6);
+        livrobiblioteca.setLocalPrateleira("Prateleira AB2"); 
+        livrobiblioteca.setCategoria("Animação"); 
+        livrobiblioteca.setPrazoEntrega(10);
+        livrobiblioteca.setNomeQuemEmprestou("Ana Julya");
 
         livrobiblioteca.Ler();
         livrobiblioteca.Cadastrar();
@@ -35,18 +35,22 @@ public class SistemaLivros {
 
         LivroLivraria livrolivraria = new LivroLivraria();
 
-        livrolivraria.codigo = 11;
-        livrolivraria.titulo = "Cinderela";
-        livrolivraria.autor = "Autor Desconhecido";
-        livrolivraria.editora = "Editora 123"; 
-        livrolivraria.nrPaginas = 200;
-        livrolivraria.edicao = 6;
-        livrolivraria.localPrateleira = "Prateleira AB2";
-        livrolivraria.categoria = "Animação";
-        livrolivraria.preco = 10;
-        livrolivraria.novoUsado = "Usado";
+        livrolivraria.setCodigo(21);
+        livrolivraria.setTitulo("Cinderela");
+        livrolivraria.setAutor("Autor Desconhecido");
+        livrolivraria.setEditora("Editora 123");
+        livrolivraria.setNrPaginas(200);
+        livrolivraria.setEdicao(6);
+        livrolivraria.setLocalPrateleira("Prateleira AB2"); 
+        livrolivraria.setCategoria("Animação"); 
+        livrolivraria.setPreco(10.99);
+        livrolivraria.setNovoUsado("Usado");
 
         livrolivraria.Vender();
+
+        System.out.println("Codigo do livro livraria: "+livrolivraria.getCodigo());
+        System.out.println("Codigo do livro biblioteca: "+livrobiblioteca.getCodigo());
+        System.out.println("Codigo do livro: "+livro.getCodigo());
 
     }
 }
