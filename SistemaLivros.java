@@ -2,7 +2,7 @@ public class SistemaLivros {
 
     public static void main(String[] args){
 
-        Livros livro = new Livros();
+        Livros livro = new Livros(); //Método construtor
         livro.setCodigo(1);
         livro.setTitulo("Codigo da Vinci"); 
         livro.setAutor("Autor Desconhecido");
@@ -74,6 +74,10 @@ public class SistemaLivros {
                             "\nLocal da prateleira: "+livrolivraria.getLocalPrateleira()+
                             "\nCategoria: "+livrolivraria.getCategoria());                 
 
-
+        //Exemplo método construtor
+        Livros novoLivro = new Livros();
+        System.out.println("Novo Livro: "+novoLivro.getTitulo());
+        novoLivro.setTitulo("Novo titulo legal");
+        System.out.println("Novo Livro: "+novoLivro.getTitulo());
     }
 }

@@ -8,6 +8,16 @@ public class Livros {
     private int nrPaginas;
     private int edicao;
 
+    //Método construtor (serve para construir seu objeto com valores default)
+    Livros(){
+        this.codigo = 0;
+        this.titulo = "Nenhum Titulo";
+        this.autor = "";
+        this.editora = "";
+        this.nrPaginas = 0;
+        this.edicao = 0;
+    }
+
     //Metodos
     public int getCodigo(){ //Método de acesso para um atributo que é privado
         return codigo;
